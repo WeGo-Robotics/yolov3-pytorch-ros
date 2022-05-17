@@ -123,7 +123,7 @@ class YOLOv3_node():
             self.pub_data.publish(datamsg)
             self.objectList = []
 
-            print("published")
+            # print("published")
 
         except CvBridgeError as e:
             print(e)

@@ -11,7 +11,7 @@
     <arg name="config_name" default="yolov3-tiny.cfg" />
     <arg name="class_name" default="custom.names" />
 
-    <node pkg="yolov3-ros" type="yolov3_ros.py" name="yolov3_node" output="screen">
+    <node pkg="yolov3-ros" type="yolov3_ros.py" name="yolov3_node" output="log">
         <param name="model_path" type="string" value="$(arg config_path)/$(arg config_name)" />
         <param name="weight_path" type="string" value="$(arg weight_path)/$(arg weight_name)" />
         <param name="class_path" type="string" value="$(arg class_path)/$(arg class_name)" />
