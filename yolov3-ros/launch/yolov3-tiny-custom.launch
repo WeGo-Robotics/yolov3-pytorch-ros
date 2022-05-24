@@ -6,7 +6,7 @@
     <arg name="config_path" default="$(find yolov3-ros)/src/cfg" />
     <arg name="class_path" default="$(find yolov3-ros)/src/data" />
 
-    <arg name="weight_name" default="yolov3_ckpt_100_tiny.pth" />
+    <arg name="weight_name" default="yolov3_ckpt_100.pth" />
     <arg name="config_name" default="yolov3-tiny.cfg" />
     <arg name="class_name" default="custom.names" />
 
@@ -16,5 +16,6 @@
         <param name="class_path" type="string" value="$(arg class_path)/$(arg class_name)" />
         <param name="color_path" type="string" value="$(arg color_path)" />
         <remap from="image" to="/camera/rgb/image_rect_color/compressed"/>
+        <!-- <remap from="image" to="/usb_cam/image_raw/compressed"/> -->
     </node>
 </launch>
